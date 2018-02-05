@@ -1,24 +1,32 @@
-﻿
-@model IEnumerable<Here.Models.Movie>
+﻿@model IEnumerable<Here.Models.Movie>
 
 @{
     ViewBag.Title = "Movies list";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movies</h2>
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>Movie</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var movie in Model)
-    {
-        <tr>
-            <td>@movie.Name</td>
-        </tr>
-    }
-    </tbody>
-</table>
+<h2>List of movies</h2>
+@if (!Model.Any())
+{
+    <p>Currenly we don't have any movies</p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                    <td>@movie.Genre.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
