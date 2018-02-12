@@ -19,7 +19,7 @@ else
             <th>Name</th>
             <th>Membership Type</th>
             <th>Discount Rate</th>
-            <th></th>
+            <th class="text-right"></th>
         </tr>
         </thead>
         <tbody>
@@ -30,10 +30,13 @@ else
                 <td>@Html.ActionLink(customer.Name, "Details", "Customers", new {id = customer.Id}, null)</td>
                 <td>@customer.MembershipType.Name</td>
                 <td>@customer.MembershipType.DiscountRate%</td>
-                <td>
-                    <button class="btn btn-sercondary btn-xs">@Html.ActionLink("Edit", "Edit", "Customers", new { id = customer.Id }, new { style = "text-decoration:none" })</button>
+                <td class="text-right">
+                    <button type="button" onclick="location.href='@Url.Action("Edit", "Customers" , new {id=customer.Id} )'"
+                            class="btn btn-primary btn-xs">
+                        <i class="fa fa-pencil"></i>
+                        &nbsp;Edit 
+                    </button>
                 </td>
-
             </tr>
         }
         </tbody>

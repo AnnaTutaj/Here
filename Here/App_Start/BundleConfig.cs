@@ -25,7 +25,10 @@ namespace Here
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-flatly.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css", 
+                      "~/Content/font-awesome.css",
+                      "~/Content/font-awesome.min.css"
+                ));
         }
     }
 }
