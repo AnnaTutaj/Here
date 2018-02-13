@@ -6,6 +6,11 @@
 }
 
 <h2>List of customers</h2>
+<button type="button" onclick="location.href = '@Url.Action("New", "Customers", new {})'"
+        class="btn btn-primary btn-sm">
+    <i class="fa fa-plus"></i>
+    &nbsp;Add
+</button>
 @if (!Model.Any())
 {
     <p>Currenly we don't have any customers</p>
