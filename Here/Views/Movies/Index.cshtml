@@ -4,8 +4,14 @@
     ViewBag.Title = "Movies list";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>List of movies</h2>
+
+<button type="button" onclick="location.href = '@Url.Action("New", "Movies", new {})'"
+        class="btn btn-primary btn-sm">
+    <i class="fa fa-plus"></i>
+    &nbsp;Add
+</button>
+
 @if (!Model.Any())
 {
     <p>Currenly we don't have any movies</p>
@@ -14,19 +20,28 @@ else
 {
     <table class="table table-striped table-hover">
         <thead>
-            <tr>
-                <th>Name</th>
-                <th>Genre</th>
-            </tr>
+        <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var movie in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
-                    <td>@movie.Genre.Name</td>
-                </tr>
-            }
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new {id = movie.Id}, null)</td>
+                <td>@movie.Genre.Name</td>
+                <td>
+                <td class="text-right">
+                    <button type="button" onclick="location.href='@Url.Action("Edit", "Movies" , new {id=movie.Id} )'"
+                            class="btn btn-primary btn-xs">
+                        <i class="fa fa-pencil"></i>
+                        &nbsp;Edit 
+                    </button>
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 }
