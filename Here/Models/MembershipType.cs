@@ -12,5 +12,8 @@ namespace Here.Models
         public short SignUpFee { get; set; }
         public byte DurationInMonths  { get; set; }
         public byte DiscountRate { get; set; }
+
+        public static readonly byte Unkonwn = 0;
+        public static readonly byte PasyAsYouGo = 1;
     }
 }
