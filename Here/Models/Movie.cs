@@ -20,14 +20,14 @@ namespace Here.Models
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }
 
-        [Display(Name = "Added Date")]
+        [Display(Name = "Added date")]
         public DateTime CreatedAt { get; set; }
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Release date")]
         public DateTime ReleaseDate { get; set; }
 
+        [Display(Name = "Number in stock")]
+        [Range(1, 30)]
         public byte NumberInStock { get; set; }
-
-
     }
 }
