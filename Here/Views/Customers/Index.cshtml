@@ -57,15 +57,17 @@ else
         $(document).ready(function () {
             $("#customers .js-delete").on("click", function () {
                 var btn = $(this);
-                if (confirm("Are you sure you want to delete that customer?")) {
-                    $.ajax({
-                        url: "/api/customers/" + btn.attr("customer-id"),
-                        method: "DELETE",
-                        success: function () {
-                            btn.parents("tr").remove();
-                        }
-                    });
-                };
+                bootbox.confirm("Are you sure you want to delete that customer?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/customers/" + btn.attr("customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                btn.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
             });
         });
     </script>
