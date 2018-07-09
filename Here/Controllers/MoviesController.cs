@@ -15,7 +15,7 @@ namespace Vidly.Controllers
 
         public MoviesController()
         {
-            _context=new ApplicationDbContext();
+            _context = new ApplicationDbContext();
         }
 
         protected override void Dispose(bool disposing)
@@ -25,7 +25,7 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            return User.IsInRole(RoleName.CanManageMovies) ? View("List") : View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
@@ -40,6 +40,7 @@ namespace Vidly.Controllers
 
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             //pobranie listy 
@@ -82,7 +83,7 @@ namespace Vidly.Controllers
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
 
-             _context.SaveChanges();
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Movies");
         }
