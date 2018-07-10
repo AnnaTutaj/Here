@@ -54,9 +54,10 @@ namespace Here
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "338653443337145",
+               //appSecret z developers.facebook.com, na repo nie wrzucam :) 
+               appSecret: "ImNotGoingToShowMyAppSecretInCommit");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

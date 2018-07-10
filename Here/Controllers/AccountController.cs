@@ -151,7 +151,8 @@ namespace Here.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser {
+                var user = new ApplicationUser
+                {
                     UserName = model.Email,
                     Email = model.Email,
                     Nick = model.Nick
@@ -371,7 +372,12 @@ namespace Here.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Nick = model.Nick
+                };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

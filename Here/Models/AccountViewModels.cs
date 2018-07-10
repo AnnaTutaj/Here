@@ -8,6 +8,9 @@ namespace Here.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        public string Nick { get; set; }
     }
 
     public class ExternalLoginListViewModel
