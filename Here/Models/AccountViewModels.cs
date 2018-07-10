@@ -11,6 +11,9 @@ namespace Here.Models
 
         [Required]
         public string Nick { get; set; }
+
+        [Required]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -69,6 +72,10 @@ namespace Here.Models
     {
         [Required]
         public string Nick { get; set; }
+
+        [Required]
+        public string Phone { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

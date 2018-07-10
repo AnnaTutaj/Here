@@ -155,7 +155,8 @@ namespace Here.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    Nick = model.Nick
+                    Nick = model.Nick,
+                    Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -376,7 +377,8 @@ namespace Here.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    Nick = model.Nick
+                    Nick = model.Nick,
+                    Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
