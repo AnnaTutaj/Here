@@ -296,6 +296,10 @@
     <Compile Include="Migrations\201807091646451_SeedUsers.Designer.cs">
       <DependentUpon>201807091646451_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807101638469_AddNickToApplicationUser.cs" />
+    <Compile Include="Migrations\201807101638469_AddNickToApplicationUser.Designer.cs">
+      <DependentUpon>201807101638469_AddNickToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -634,6 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807091646451_SeedUsers.resx">
       <DependentUpon>201807091646451_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807101638469_AddNickToApplicationUser.resx">
+      <DependentUpon>201807101638469_AddNickToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
