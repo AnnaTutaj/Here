@@ -29,5 +29,8 @@ namespace Here.Models
         [Display(Name = "Number in stock")]
         [Range(1, 30)]
         public byte NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
+
     }
 }
