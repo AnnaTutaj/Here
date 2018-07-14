@@ -28,6 +28,14 @@ namespace Here.Controllers.Api
 
             foreach (var movie in movies)
             {
+                if (movie.NumberAvailable == 0)
+                {
+                    return BadRequest("Movie is not available");
+
+                }
+
+                movie.NumberAvailable--;
+
                 var newRental = new Rental
                 {
                     Customer = customer,
