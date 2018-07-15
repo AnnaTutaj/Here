@@ -14,7 +14,8 @@ namespace Here
                          "~/Scripts/bootbox.js",
                          "~/Scripts/respond.js",
                          "~/scripts/datatables/jquery.datatables.js",
-                         "~/scripts/datatables/datatables.bootstrap.js"
+                         "~/scripts/datatables/datatables.bootstrap.js",
+                         "~/scripts/typeahead.bundle.js"
                          ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -30,7 +31,8 @@ namespace Here
                       "~/Content/site.css",
                       "~/Content/font-awesome.css",
                       "~/Content/font-awesome.min.css", 
-                      "~/content/datatables/css/datatables.bootstrap.css"
+                      "~/content/datatables/css/datatables.bootstrap.css",
+                      "~/content/typeahead.css"
                 ));
         }
     }
