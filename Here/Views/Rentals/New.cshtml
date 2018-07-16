@@ -88,10 +88,10 @@
                     data: vm
                 })
                 .done(function () {
-                    console.log("udalo sie! :) ");
+                    toastr.success("Rental has been added");
                 })
                 .fail(function () {
-                    console.log("cos poszlo nie tak :( ");
+                    toastr.error("Cannot add rental");
                 });
             });
         });
