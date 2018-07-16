@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -55,9 +56,9 @@ namespace Here
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "338653443337145",
+               appId: ConfigurationManager.AppSettings["FacebookAppId"],
                //appSecret z developers.facebook.com, na repo nie wrzucam :) 
-               appSecret: "ImNotGoingToShowMyAppSecretInCommit");
+               appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"]);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
