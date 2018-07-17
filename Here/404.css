@@ -1,0 +1,326 @@
+﻿@font-face {
+  font-family: 'arrows';
+  src: url('http://fabrikmedia.blob.core.windows.net/public/fonts/arrows/arrows.eot?lg51l7');
+  src: url('http://fabrikmedia.blob.core.windows.net/public/fonts/arrows/arrows.eot?lg51l7#iefix') format('embedded-opentype'), 
+       url('http://fabrikmedia.blob.core.windows.net/public/fonts/arrows/arrows.ttf?lg51l7') format('truetype'), 
+       url('http://fabrikmedia.blob.core.windows.net/public/fonts/arrows/arrows.woff?lg51l7') format('woff'), 
+       url('http://fabrikmedia.blob.core.windows.net/public/fonts/arrows/arrows.svg?lg51l7#arrows') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'arrows' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-noblock-down:before {
+    content: "\e672";
+}
+.icon-noblock-up:before {
+    content: "\e673";
+}
+.icon-noblock-back:before {
+    content: "\e66c";
+}
+.icon-noblock-next:before {
+    content: "\e66d";
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #1b1e23;
+  color: #fff;
+  font: 300 62.5%/1.45 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+p {
+  font-size: 2.2em;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 5.2em;
+  line-height: 1.1;
+  margin: 0.69230769230769em 0;
+  font-weight: 300;
+}
+
+.wrap {
+  height: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+.main {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 46em;
+  padding: 2em;
+}
+
+form {
+  margin: 30px auto 60px;
+}
+
+.input-group {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 440px;
+
+}
+
+.input-btn {
+  display: table-cell;
+  width: 1%;
+  vertical-align: top;
+}
+
+.text-input {
+  font-size: 40px;
+  height: 78px;
+  line-height: 64px;
+  padding: 0 15px;
+  font-weight: 300;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: table-cell;
+  width: 100%;
+  outline: none;
+  vertical-align: top;
+}
+
+.btn {
+  font-size: 70px;
+  width: 78px;
+  height: 78px;
+  line-height: 0;
+  display: inline-block;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+  margin: 0;
+  padding: 0;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: top;
+  background: #fff;
+  color: #1b1e23;
+  outline: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.field-validation-error {
+  font-size: 2.2em;
+  margin: 1em 0;
+  color: #eb005f;
+  display: block;
+}
+
+.underslide {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+  .underslide:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    -moz-transition: width .5s ease, background-color .5s ease;
+    -o-transition: width .5s ease, background-color .5s ease;
+    -webkit-transition: width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+  }
+
+  .underslide:hover:after {
+    width: 0;
+    background: transparent;
+  }
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+  .animated.hinge {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes wobble {
+  0% {
+    -moz-transform: translateX(0%);
+  }
+
+  15% {
+    -moz-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    -moz-transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    -moz-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    -moz-transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    -moz-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    -moz-transform: translateX(0%);
+  }
+}
+
+@-o-keyframes wobble {
+  0% {
+    -o-transform: translateX(0%);
+  }
+
+  15% {
+    -o-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    -o-transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    -o-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    -o-transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    -o-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    -o-transform: translateX(0%);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.input-validation-error,
+.wobble {
+  -webkit-animation-name: wobble;
+  -moz-animation-name: wobble;
+  -o-animation-name: wobble;
+  animation-name: wobble;
+}
